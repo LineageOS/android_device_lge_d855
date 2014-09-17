@@ -1,1 +1,59 @@
-# Proprietary files for D851
+# GPS
+bin/gsiff_daemon
+bin/location-mq
+bin/quipc_igsn
+bin/quipc_main
+bin/xtwifi-client
+bin/xtwifi-inet-agent
+lib/libloc_api_v02.so
+lib/libloc_ds_api.so
+vendor/lib/libalarmservice_jni.so
+vendor/lib/libgeofence.so
+vendor/lib/libizat_core.so
+vendor/lib/liblbs_core.so
+vendor/lib/liblocationservice.so
+vendor/lib/libquipc_os_api.so
+vendor/lib/libquipc_ulp_adapter.so
+vendor/lib/libulp2.so
+vendor/lib/libxtadapter.so
+vendor/lib/libxtwifi_ulp_adaptor.so
+vendor/lib/libxtwifi_zpp_adaptor.so
+
+# Qualcomm framework
+vendor/lib/libdiag.so
+vendor/lib/libdsi_netctrl.so
+vendor/lib/libdsnetutils.so
+vendor/lib/libdsutils.so
+vendor/lib/libidl.so
+vendor/lib/libqcci_legacy.so
+vendor/lib/libqdi.so
+vendor/lib/libqdp.so
+vendor/lib/libqmi.so
+vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_client_qmux.so
+vendor/lib/libqmi_common_so.so
+vendor/lib/libqmi_csi.so
+vendor/lib/libqmi_csvt_srvc.so
+vendor/lib/libqmi_encdec.so
+vendor/lib/libqmiservices.so
+
+# Radio
+bin/netmgrd
+bin/qmuxd
+bin/rfs_access
+bin/rmt_storage
+lib/liblgderp.so
+lib/libril.so
+lib/libvss_common_idl.so
+lib/libvss_common_iface.so
+lib/libvss_nv_idl.so
+lib/libvss_nv_iface.so
+vendor/lib/libnetmgr.so
+vendor/lib/libril-qc-qmi-1.so
+vendor/lib/libril-qcril-hook-oem.so
+
+# Sensors
+bin/sensors.qcom
+vendor/lib/hw/sensors.msm8974.so
+vendor/lib/libsensor1.so
+vendor/lib/libsensor_reg.so
