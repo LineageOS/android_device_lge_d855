@@ -4,4 +4,4 @@ set -e
 
 export VENDOR=lge
 export DEVICE=d851
-./../../$VENDOR/klte-common/extract-files.sh $@
+./../../$VENDOR/g3-common/extract-files.sh $@
