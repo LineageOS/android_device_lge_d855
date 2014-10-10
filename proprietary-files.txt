@@ -42,7 +42,6 @@ bin/netmgrd
 bin/qmuxd
 bin/rfs_access
 bin/rmt_storage
-lib/liblgderp.so
 lib/libril.so
 lib/libvss_common_idl.so
 lib/libvss_common_iface.so

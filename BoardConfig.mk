@@ -17,10 +17,10 @@
 # inherit from common g3
 -include device/lge/g3-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := g3,d851
+TARGET_OTA_ASSERT_DEVICE := g3,vs985
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_d851_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_vs985_defconfig
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
@@ -29,4 +29,4 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2692743168
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 27325360128
 
 # inherit from the proprietary version
--include vendor/lge/d851/BoardConfigVendor.mk
+-include vendor/lge/vs985/BoardConfigVendor.mk
