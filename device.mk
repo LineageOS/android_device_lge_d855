@@ -19,6 +19,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/lge/vs985/vs985-vendor.mk)
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    init.galbi.bt.sh \
+    init.galbi.bt_vendor.rc
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
