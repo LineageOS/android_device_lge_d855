@@ -1,3 +1,7 @@
+# Bluetooth
+bin/hci_qcomm_init
+vendor/lib/libbtnv.so
+
 # GPS
 bin/gsiff_daemon
 bin/location-mq
