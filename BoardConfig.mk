@@ -17,15 +17,15 @@
 # inherit from common g3
 -include device/lge/g3-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := g3,vs985
+TARGET_OTA_ASSERT_DEVICE := g3,d855
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/vs985/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/d855/bluetooth
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_vs985_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_d855_defconfig
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
@@ -34,7 +34,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2692743168
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 27325360128
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/lge/vs985/rootdir/etc/fstab.g3
+TARGET_RECOVERY_FSTAB := device/lge/d855/rootdir/etc/fstab.g3
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
@@ -49,4 +49,4 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/lge/vs985/BoardConfigVendor.mk
+-include vendor/lge/d855/BoardConfigVendor.mk

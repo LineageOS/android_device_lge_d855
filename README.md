@@ -1,6 +1,6 @@
 Copyright 2014 - The CyanogenMod Project
 
-Device configuration for LGE G3 (VZW)
+Device configuration for LGE G3 (International)
 =====================================
 
 Basic   | Spec Sheet
@@ -19,4 +19,4 @@ Camera  | 13 MP, 4160 x 3120 pixels
 Release Date | July 2014
 
 
-![LG G3 VS985](http://i.imgur.com/sYNKEHq.jpg "LG G3 VS985")
+![LG G3 D855](http://i.imgur.com/sYNKEHq.jpg "LG G3 D855")

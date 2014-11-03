@@ -25,7 +25,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter vs985,$(TARGET_DEVICE)),)
+ifneq ($(filter d855,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 WCNSS_IMAGES := \
