@@ -29,6 +29,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    libwcnss_qmi \
     wcnss_service
 
 PRODUCT_COPY_FILES += \
