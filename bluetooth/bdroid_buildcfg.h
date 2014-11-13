@@ -17,7 +17,7 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BLUETOOTH_QCOM_SW TRUE
+#define BLUETOOTH_QTI_SW TRUE
 
 #define BTM_DEF_LOCAL_NAME   "LG G3 D855"
 // Disables read remote device feature
