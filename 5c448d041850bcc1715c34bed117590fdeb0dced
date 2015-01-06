@@ -16,6 +16,24 @@
       "revId": "5c448d041850bcc1715c34bed117590fdeb0dced",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7aa08908_5b873a61",
+        "filename": "cm.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3081
+      },
+      "writtenOn": "2015-01-06T14:37:13Z",
+      "side": 0,
+      "message": "Yes, you\u0027re right. Didn\u0027t remember... It works fine without too but some apps maybe won\u0027t show up so let\u0027s better leave it here.",
+      "parentUuid": "7aa08908_601d2173",
+      "revId": "5c448d041850bcc1715c34bed117590fdeb0dced",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }

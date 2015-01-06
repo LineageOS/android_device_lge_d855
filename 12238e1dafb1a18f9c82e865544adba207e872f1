@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7aa08908_7b9b16ca",
+        "filename": "cm.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3081
+      },
+      "writtenOn": "2015-01-06T14:37:13Z",
+      "side": 1,
+      "message": "Okay, my bad. But we should move them to this place.",
+      "parentUuid": "7aa08908_c0121562",
+      "revId": "12238e1dafb1a18f9c82e865544adba207e872f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7aa08908_80180d86",
         "filename": "cm.mk",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2015-01-06T13:25:48Z",
       "side": 1,
       "message": "This package no longer exists",
+      "revId": "12238e1dafb1a18f9c82e865544adba207e872f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7aa08908_5ba0daf4",
+        "filename": "cm.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 3081
+      },
+      "writtenOn": "2015-01-06T14:37:13Z",
+      "side": 1,
+      "message": "Mh, okay.",
+      "parentUuid": "7aa08908_80180d86",
       "revId": "12238e1dafb1a18f9c82e865544adba207e872f1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
