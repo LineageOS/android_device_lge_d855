@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7aa08908_601d2173",
+        "filename": "cm.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2015-01-06T13:25:48Z",
+      "side": 0,
+      "message": "Play store doesn\u0027t use this?",
+      "revId": "5c448d041850bcc1715c34bed117590fdeb0dced",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
