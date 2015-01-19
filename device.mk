@@ -16,8 +16,8 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/lge/d855/d855-vendor.mk)
+# common g3
+$(call inherit-product, device/lge/g3-common/g3.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -50,5 +50,5 @@ PRODUCT_COPY_FILES += \
     device/lge/g3-common/wcnss/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     device/lge/g3-common/wcnss/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
-# common g3
-$(call inherit-product, device/lge/g3-common/g3.mk)
+# Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/lge/d855/d855-vendor.mk)
