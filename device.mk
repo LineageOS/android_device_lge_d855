@@ -31,6 +31,10 @@ PRODUCT_PACKAGES += \
     init.galbi.bt.sh \
     init.galbi.bt_vendor.rc
 
+# GPS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
+
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf
