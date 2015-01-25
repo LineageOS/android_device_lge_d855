@@ -23,6 +23,10 @@ $(call inherit-product-if-exists, vendor/lge/d855/d855-vendor.mk)
 PRODUCT_COPY_FILES += \
     device/lge/g3-common/configs/mixer_paths_qcwcn.xml:system/etc/mixer_paths.xml
 
+# NFC
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
