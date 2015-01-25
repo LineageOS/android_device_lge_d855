@@ -38,6 +38,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Recovery
 TARGET_RECOVERY_FSTAB := device/lge/d855/rootdir/etc/fstab.g3
 
+# NFC
+BOARD_NFC_CHIPSET := pn547
+
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
