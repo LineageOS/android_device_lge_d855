@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fad55976_b6d78d22",
+        "filename": "device.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 11688
+      },
+      "writtenOn": "2015-01-26T18:24:34Z",
+      "side": 1,
+      "message": "I think more packages should be moved over\n# NFC\nPRODUCT_PACKAGES +\u003d \\\n    com.android.nfc_extras \\\n    NfcNci \\\n    nfc_nci.g3 \\\n    Tag",
+      "revId": "f6212a849097e8ee23741bca3db3da774795e2df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
