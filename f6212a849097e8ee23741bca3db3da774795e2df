@@ -16,6 +16,24 @@
       "revId": "f6212a849097e8ee23741bca3db3da774795e2df",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fad55976_f6e10500",
+        "filename": "device.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2015-01-26T18:28:58Z",
+      "side": 1,
+      "message": "No need to decommonize Tag since all variants use that. Also the g3 doesn\u0027t have an nfc_nci.g3",
+      "parentUuid": "fad55976_b6d78d22",
+      "revId": "f6212a849097e8ee23741bca3db3da774795e2df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
