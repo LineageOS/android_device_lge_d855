@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,6 +18,9 @@
 -include device/lge/g3-common/BoardConfigCommon.mk
 
 TARGET_OTA_ASSERT_DEVICE := g3,d855
+
+# Assertions
+TARGET_BOARD_INFO_FILE ?= device/lge/d855/board-info.txt
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
@@ -40,6 +43,10 @@ TARGET_RECOVERY_FSTAB := device/lge/d855/rootdir/etc/fstab.g3
 
 # NFC
 BOARD_NFC_CHIPSET := pn547
+
+# Releasetools
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_g3
+TARGET_RELEASETOOLS_EXTENSIONS := device/lge/d855
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
