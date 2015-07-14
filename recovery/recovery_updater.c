@@ -161,11 +161,11 @@ Value * VerifyBasebandFn(const char *name, State *state, int argc, Expr *argv[])
                 name, ret);
     }
 
-    for (i = 1; i <= argc; i++) {
-        ret = ReadArgs(state, argv, i, &baseband_version);
-        if (ret < 0) {
+    for (i = 0; i < argc; i++) {
+        baseband_version = Evaluate(state, argv[i]);
+        if (baseband_version < 0) {
             return ErrorAbort(state, "%s() error parsing arguments: %d",
-                name, ret);
+                name, baseband_version);
         }
 
         uiPrintf(state, "Comparing BASEBAND version %s to %s",
