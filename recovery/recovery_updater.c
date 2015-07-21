@@ -152,7 +152,9 @@ err_ret:
 /* verify_baseband("BASEBAND_VERSION", "BASEBAND_VERSION", ...) */
 Value * VerifyBasebandFn(const char *name, State *state, int argc, Expr *argv[]) {
     char current_baseband_version[BASEBAND_VER_BUF_LEN];
+    char *baseband_string;
     char *baseband_version;
+    char *baseband_short_version;
     int i, ret;
 
     ret = get_baseband_version(current_baseband_version, BASEBAND_VER_BUF_LEN);
@@ -162,19 +164,22 @@ Value * VerifyBasebandFn(const char *name, State *state, int argc, Expr *argv[])
     }
 
     for (i = 0; i < argc; i++) {
-        baseband_version = Evaluate(state, argv[i]);
-        if (baseband_version < 0) {
+        baseband_string = Evaluate(state, argv[i]);
+        if (baseband_string < 0) {
             return ErrorAbort(state, "%s() error parsing arguments: %d",
-                name, baseband_version);
+                name, baseband_string);
         }
 
-        uiPrintf(state, "Comparing BASEBAND version %s to %s",
-                baseband_version, current_baseband_version);
+        baseband_short_version = strtok(baseband_string, ":");
+        baseband_version = strtok(NULL, ":");
+
+        uiPrintf(state, "Checking for BASEBAND version %s", baseband_short_version);
         if (strncmp(baseband_version, current_baseband_version, strlen(baseband_version)) == 0) {
             return StringValue(strdup("1"));
         }
     }
 
+    uiPrintf(state, "ERROR: It appears you are running an unsupported baseband.");
     return StringValue(strdup("0"));
 }
 
