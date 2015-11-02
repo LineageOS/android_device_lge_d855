@@ -3,7 +3,6 @@ bin/hci_qcomm_init
 vendor/lib/libbtnv.so
 
 # GPS
-bin/gsiff_daemon
 bin/location-mq
 bin/quipc_igsn
 bin/quipc_main
@@ -26,7 +25,6 @@ vendor/lib/libxtwifi_zpp_adaptor.so
 # Qualcomm framework
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
-vendor/lib/libdsnetutils.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
 vendor/lib/libqcci_legacy.so
@@ -47,7 +45,6 @@ bin/qmuxd
 bin/rfs_access
 bin/rmt_storage
 lib/libcnefeatureconfig.so
-lib/libconfigdb.so
 lib/libmdmdetect.so
 lib/libril.so
 lib/libuicc.so
@@ -55,7 +52,7 @@ lib/libvss_common_idl.so
 lib/libvss_common_iface.so
 lib/libvss_nv_idl.so
 lib/libvss_nv_iface.so
-lib/libxml.so
+vendor/lib/libconfigdb.so
 vendor/lib/libcneapiclient.so
 vendor/lib/libnetmgr.so
 vendor/lib/libperipheral_client.so
@@ -63,6 +60,7 @@ vendor/lib/libril-qc-qmi-1.so
 vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/libsmemlog.so
 vendor/lib/libsystem_health_mon.so
+vendor/lib/libxml.so
 
 # Sensors
 bin/sensors.qcom
