@@ -44,7 +44,6 @@ bin/netmgrd
 bin/qmuxd
 bin/rfs_access
 bin/rmt_storage
-lib/libcnefeatureconfig.so
 lib/libmdmdetect.so
 lib/libril.so
 lib/libuicc.so
