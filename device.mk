@@ -19,10 +19,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/lge/d855/d855-vendor.mk)
 
-# Audio
-PRODUCT_COPY_FILES += \
-    device/lge/g3-common/configs/audio/mixer_paths_qcwcn.xml:system/etc/mixer_paths.xml
-
 # NFC
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
