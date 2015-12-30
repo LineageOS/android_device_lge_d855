@@ -3,9 +3,6 @@ bin/hci_qcomm_init
 vendor/lib/libbtnv.so
 
 # GPS
-bin/location-mq
-bin/quipc_igsn
-bin/quipc_main
 bin/xtwifi-client
 bin/xtwifi-inet-agent
 lib/libloc_api_v02.so
@@ -16,11 +13,9 @@ vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
 vendor/lib/liblocationservice.so
 vendor/lib/libquipc_os_api.so
-vendor/lib/libquipc_ulp_adapter.so
 vendor/lib/libulp2.so
 vendor/lib/libxtadapter.so
 vendor/lib/libxtwifi_ulp_adaptor.so
-vendor/lib/libxtwifi_zpp_adaptor.so
 
 # Qualcomm framework
 vendor/lib/libdiag.so
@@ -35,7 +30,6 @@ vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
-vendor/lib/libqmi_csvt_srvc.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
 
