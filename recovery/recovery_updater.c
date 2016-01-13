@@ -33,8 +33,8 @@
 #define KB 1024
 
 #define BASEBAND_PART_PATH "/dev/block/platform/msm_sdcc.1/by-name/modem"
-#define BASEBAND_VER_STR_START "MPSS.DI."
-#define BASEBAND_VER_STR_START_LEN 8
+#define BASEBAND_VER_STR_START "QC_IMAGE_VERSION_STRING="
+#define BASEBAND_VER_STR_START_LEN 24
 #define BASEBAND_VER_BUF_LEN 255
 #define BASEBAND_SZ 64000 * KB    /* MMAP 64M of BASEBAND, BASEBAND partition is 64M */
 
@@ -137,7 +137,7 @@ static int get_baseband_version(char *ver_str, size_t len) {
     /* Do Boyer-Moore search across BASEBAND data */
     offset = bm_search(baseband_data, BASEBAND_SZ, BASEBAND_VER_STR_START, BASEBAND_VER_STR_START_LEN);
     if (offset != NULL) {
-        strncpy(ver_str, offset, len);
+        strncpy(ver_str, offset + BASEBAND_VER_STR_START_LEN, len);
     } else {
         ret = -ENOENT;
     }
