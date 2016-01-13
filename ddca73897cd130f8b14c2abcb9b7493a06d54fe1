@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fcbff3d_60625819",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2016-01-13T23:08:52Z",
+      "side": 1,
+      "message": "typo? QC_IMAGE_VERSION_STRING",
+      "revId": "ddca73897cd130f8b14c2abcb9b7493a06d54fe1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
