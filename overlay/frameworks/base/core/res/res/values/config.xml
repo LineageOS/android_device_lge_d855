@@ -19,20 +19,13 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- If the DUN connection for this CDMA device supports more than just DUN -->
-    <!-- traffic you should list them here. -->
-    <!-- If this device is not CDMA this is ignored.  If this list is empty on -->
-    <!-- a DUN-requireing CDMA device, the DUN APN will support -->
-    <!-- just DUN. -->
-    <string-array translatable="false" name="config_cdma_dun_supported_types">
-        <item>"default"</item>
-        <item>"dun"</item>
-        <item>"mms"</item>
-        <item>"supl"</item>
-    </string-array>
-
     <!-- Flag specifying whether VoLTE is available on device -->
     <bool name="config_device_volte_available">true</bool>
+
+    <!-- Flag specifying whether VoLTE & VT should be available for carrier: independent of
+         carrier provisioning. If false: hard disabled. If true: then depends on carrier
+         provisioning, availability etc -->
+    <bool name="config_carrier_volte_available">true</bool>
 
     <!-- The RadioAccessFamilies supported by the device.
          Empty is viewed as "all".  Only used on devices which
