@@ -61,5 +61,9 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+#FM Radio
+AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
+TARGET_QCOM_NO_FM_FIRMWARE := true
+
 # inherit from the proprietary version
 -include vendor/lge/d855/BoardConfigVendor.mk
