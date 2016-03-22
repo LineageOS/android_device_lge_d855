@@ -1,3 +1,16 @@
+# Audio
+etc/acdbdata/Bluetooth_cal.acdb
+etc/acdbdata/General_cal.acdb
+etc/acdbdata/Global_cal.acdb
+etc/acdbdata/Handset_cal.acdb
+etc/acdbdata/Hdmi_cal.acdb
+etc/acdbdata/Headset_cal.acdb
+etc/acdbdata/Speaker_cal.acdb
+vendor/lib/libacdbloader.so
+vendor/lib/libacdbrtac.so
+vendor/lib/libadiertac.so
+vendor/lib/libaudcal.so
+
 # Qualcomm framework
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
