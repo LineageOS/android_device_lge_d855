@@ -29,7 +29,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/d855/bluetooth
 
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_d855_defconfig
-TARGET_REQUIRES_BUMP := true
+PRODUCT_PRIVATE_KEY := device/lge/g3-common/bootkey.mk
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
