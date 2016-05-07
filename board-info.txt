@@ -1,1 +1,2 @@
 require version-baseband=21C:MPSS.DI.2.0.1.C1.13.2-00002
+require verify-lollipop=cust|client_id.xml
