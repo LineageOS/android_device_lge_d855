@@ -19,10 +19,12 @@ import re
 
 def FullOTA_Assertions(info):
   AddBasebandAssertion(info)
+  AddLollipopAssertion(info)
   return
 
 def IncrementalOTA_Assertions(info):
   AddBasebandAssertion(info)
+  AddLollipopAssertion(info)
   return
 
 def AddBasebandAssertion(info):
@@ -32,5 +34,15 @@ def AddBasebandAssertion(info):
     versions = m.group(1).split('|')
     if len(versions) and '*' not in versions:
       cmd = 'assert(g3.verify_baseband(' + ','.join(['"%s"' % baseband for baseband in versions]) + ') == "1");'
+      info.script.AppendExtra(cmd)
+  return
+
+def AddLollipopAssertion(info):
+  android_info = info.input_zip.read("OTA/android-info.txt")
+  m = re.search(r'require\s+verify-lollipop\s*=\s*(\S+)', android_info)
+  if m:
+    arguments = m.group(1).split('|')
+    if len(arguments):
+      cmd = 'assert(g3.verify_lollipop(' + ','.join(['"%s"' % argument for argument in arguments]) + ') == "1");'
       info.script.AppendExtra(cmd)
   return
