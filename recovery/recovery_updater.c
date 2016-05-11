@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-#include <linux/fs.h>
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <sys/types.h>
@@ -33,7 +32,7 @@
 #define ALPHABET_LEN 256
 #define KB 1024
 
-#define PARTITION_BASE_PATH "/dev/block/platform/msm_sdcc.1/by-name/"
+#define BASEBAND_PART_PATH "/dev/block/platform/msm_sdcc.1/by-name/modem"
 #define BASEBAND_VER_STR_START "QC_IMAGE_VERSION_STRING="
 #define BASEBAND_VER_STR_START_LEN 24
 #define BASEBAND_VER_BUF_LEN 255
@@ -122,10 +121,8 @@ static int get_baseband_version(char *ver_str, size_t len) {
     int fd;
     char *baseband_data = NULL;
     char *offset = NULL;
-    char tmp_path[100];
 
-    snprintf(tmp_path, sizeof(tmp_path), "%s%s", PARTITION_BASE_PATH, "modem");
-    fd = open(tmp_path, O_RDONLY);
+    fd = open(BASEBAND_PART_PATH, O_RDONLY);
     if (fd < 0) {
         ret = errno;
         goto err_ret;
@@ -152,39 +149,6 @@ err_ret:
     return ret;
 }
 
-static int search_partition_string(char *partition, char *search_string) {
-    int ret = 0;
-    int fd;
-    char *partition_data = NULL;
-    char tmp_path[100];
-    unsigned long size;
-
-    snprintf(tmp_path, sizeof(tmp_path), "%s%s", PARTITION_BASE_PATH, partition);
-    fd = open(tmp_path, O_RDONLY);
-    if (fd < 0) {
-        ret = errno;
-        goto err_ret;
-    }
-
-    ioctl(fd, BLKGETSIZE64, &size);
-    partition_data = (char *) mmap(NULL, (size_t) size, PROT_READ, MAP_PRIVATE, fd, 0);
-    if (partition_data == (char *)-1) {
-        ret = errno;
-        goto err_fd_close;
-    }
-
-    /* Do Boyer-Moore search across partition data */
-    if (bm_search(partition_data, (size_t) size, search_string, strlen(search_string)) == NULL) {
-        ret = -ENOENT;
-    }
-
-    munmap(partition_data, (size_t) size);
-err_fd_close:
-    close(fd);
-err_ret:
-    return ret;
-}
-
 /* verify_baseband("BASEBAND_VERSION", "BASEBAND_VERSION", ...) */
 Value * VerifyBasebandFn(const char *name, State *state, int argc, Expr *argv[]) {
     char current_baseband_version[BASEBAND_VER_BUF_LEN];
@@ -202,7 +166,7 @@ Value * VerifyBasebandFn(const char *name, State *state, int argc, Expr *argv[])
     for (i = 0; i < argc; i++) {
         baseband_string = Evaluate(state, argv[i]);
         if (baseband_string < 0) {
-            return ErrorAbort(state, "%s() error parsing arguments: %s",
+            return ErrorAbort(state, "%s() error parsing arguments: %d",
                 name, baseband_string);
         }
 
@@ -219,32 +183,6 @@ Value * VerifyBasebandFn(const char *name, State *state, int argc, Expr *argv[])
     return StringValue(strdup("0"));
 }
 
-/* verify_lollipop("PARTITON_NAME", "SEARCH_STRING") */
-Value * VerifyLollipopFn(const char *name, State *state, int argc, Expr *argv[]) {
-    char *partition_name;
-    char *search_string;
-    int ret;
-
-    if (argc != 2) {
-        return ErrorAbort(state, "%s() wrong number of arguments: %d", name, argc);
-    }
-    partition_name = Evaluate(state, argv[0]);
-    search_string = Evaluate(state, argv[1]);
-
-    uiPrintf(state, "Checking for Android 5.0 or higher...");
-
-    ret = search_partition_string(partition_name, search_string);
-    if (!ret) {
-        return StringValue(strdup("1"));
-    } else if (ret == -ENOENT) {
-        uiPrintf(state, "ERROR: Please upgrade to Android 5.0 or higher to proceed.");
-        return StringValue(strdup("0"));
-    }
-
-    return ErrorAbort(state, "%s() error verifying PARTITON %s: %d", name, partition_name, ret);
-}
-
 void Register_librecovery_updater_g3() {
     RegisterFunction("g3.verify_baseband", VerifyBasebandFn);
-    RegisterFunction("g3.verify_lollipop", VerifyLollipopFn);
 }
