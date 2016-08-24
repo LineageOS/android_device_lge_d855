@@ -29,4 +29,8 @@
 #define BTA_BLE_SKIP_CONN_UPD FALSE
 #define BLE_PERIPHERAL_ADV_NAME FALSE
 #define BT_CLEAN_TURN_ON_DISABLED 1
+
+/* Defined if the kernel does not have support for CLOCK_BOOTTIME_ALARM */
+#define KERNEL_MISSING_CLOCK_BOOTTIME_ALARM TRUE
+
 #endif
