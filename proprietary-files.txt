@@ -11,41 +11,15 @@ vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
 
-# Qualcomm framework
-vendor/lib/libdiag.so
-vendor/lib/libdsi_netctrl.so
-vendor/lib/libdsutils.so
-vendor/lib/libidl.so
-vendor/lib/libqcci_legacy.so
-vendor/lib/libqdi.so
-vendor/lib/libqdp.so
-vendor/lib/libqmi.so
-vendor/lib/libqmi_cci.so
-vendor/lib/libqmi_client_qmux.so
-vendor/lib/libqmi_common_so.so
-vendor/lib/libqmi_csi.so
-vendor/lib/libqmi_csvt_srvc.so
-vendor/lib/libqmi_encdec.so
-vendor/lib/libqmiservices.so
-
 # Radio
-bin/netmgrd
-bin/qmuxd
 bin/rfs_access
 bin/rmt_storage
-lib/libmdmdetect.so
-lib/libril.so
 lib/libuicc.so
 lib/libvss_common_idl.so
 lib/libvss_common_iface.so
 lib/libvss_nv_idl.so
 lib/libvss_nv_iface.so
-vendor/lib/libconfigdb.so
 vendor/lib/libcneapiclient.so
-vendor/lib/libnetmgr.so
-vendor/lib/libperipheral_client.so
-vendor/lib/libril-qc-qmi-1.so
-vendor/lib/libril-qcril-hook-oem.so
 
 # Sensors
 etc/sensors/sensor_def_variable.conf
