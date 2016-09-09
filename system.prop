@@ -1,10 +1,8 @@
 # Radio
 persist.radio.do_not_init_csvt=1
-rild.libargs=-d /dev/smd0
 rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 ril.subscription.types=NV,RUIM
 ro.telephony.call_ring.multiple=0
 ro.telephony.default_network=9
-ro.telephony.ril_class=LgeLteRIL
 telephony.lteOnCdmaDevice=0
 telephony.lteOnGsmDevice=1
