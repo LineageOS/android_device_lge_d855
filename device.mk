@@ -44,6 +44,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_g3
 
+# RIL
+PRODUCT_PACKAGES += \
+    librmnetctl
+
 # Wifi
 PRODUCT_PACKAGES += \
     hostapd_default.conf \
