@@ -11,6 +11,9 @@ vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
 
+# NFC
+vendor/firmware/libpn547_fw.so
+
 # Qualcomm framework
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
