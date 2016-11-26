@@ -5,20 +5,21 @@
 #TODO: Add 'check' as fs_mgr_flags with data partition.
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
-#<src>                                                <mnt_point>  <type>  <mnt_flags and options>                     <fs_mgr_flags>
-/dev/block/platform/msm_sdcc.1/by-name/system       /system         ext4    ro,barrier=1,noatime                                            wait
-/dev/block/platform/msm_sdcc.1/by-name/userdata     /data           f2fs    rw,nosuid,nodev,noatime,nodiratime,inline_xattr                 wait,check,formattable,encryptable=/dev/block/platform/msm_sdcc.1/by-name/encrypt
-/dev/block/platform/msm_sdcc.1/by-name/userdata     /data           ext4    noatime,nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue,journal_async_commit      wait,check,formattable,encryptable=/dev/block/platform/msm_sdcc.1/by-name/encrypt
-/dev/block/platform/msm_sdcc.1/by-name/cache        /cache          f2fs    rw,nosuid,nodev,noatime,nodiratime,inline_xattr                 wait,check,formattable
-/dev/block/platform/msm_sdcc.1/by-name/cache        /cache          ext4    noatime,nosuid,nodev,barrier=1,data=ordered,journal_async_commit                     wait,check,formattable
+#<src>                                              <mnt_point>     <type>  <mnt_flags and options>                                             <fs_mgr_flags>
+/dev/block/platform/msm_sdcc.1/by-name/system       /system         ext4    ro,barrier=1,noatime                                                wait
+/dev/block/platform/msm_sdcc.1/by-name/userdata     /data           f2fs    rw,nosuid,nodev,noatime,nodiratime,inline_xattr                     wait,check,formattable,encryptable=/dev/block/platform/msm_sdcc.1/by-name/encrypt
+/dev/block/platform/msm_sdcc.1/by-name/userdata     /data           ext4    noatime,nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue,journal_async_commit wait,check,formattable,encryptable=/dev/block/platform/msm_sdcc.1/by-name/encrypt
+/dev/block/platform/msm_sdcc.1/by-name/cache        /cache          f2fs    rw,nosuid,nodev,noatime,nodiratime,inline_xattr                     wait,check,formattable
+/dev/block/platform/msm_sdcc.1/by-name/cache        /cache          ext4    noatime,nosuid,nodev,barrier=1,data=ordered,journal_async_commit    wait,check,formattable
 /dev/block/platform/msm_sdcc.1/by-name/persist      /persist        ext4    nosuid,nodev,barrier=1,data=ordered,nodelalloc,nomblk_io_submit,errors=panic wait,notrim
-/dev/block/platform/msm_sdcc.1/by-name/boot         /boot           emmc    defaults                                                        recoveryonly
-/dev/block/platform/msm_sdcc.1/by-name/recovery     /recovery       emmc    defaults                                                        recoveryonly
-/dev/block/platform/msm_sdcc.1/by-name/modem        /firmware       vfat    ro,shortname=lower,uid=1000,gid=1026,dmask=227,fmask=337,context=u:object_r:firmware_file:s0        wait
+/dev/block/platform/msm_sdcc.1/by-name/boot         /boot           emmc    defaults                                                            recoveryonly
+/dev/block/platform/msm_sdcc.1/by-name/recovery     /recovery       emmc    defaults                                                            recoveryonly
+/dev/block/platform/msm_sdcc.1/by-name/modem        /firmware       vfat    ro,shortname=lower,uid=1000,gid=1026,dmask=227,fmask=337,context=u:object_r:firmware_file:s0 wait
+/dev/block/platform/msm_sdcc.1/by-name/pad          /misc           emmc    defaults                                                            defaults
 
-/dev/block/platform/msm_sdcc.1/by-name/sns          /sns            ext4    nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue wait,notrim
-/dev/block/platform/msm_sdcc.1/by-name/drm          /persist-lg     ext4    nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue wait,notrim
-/dev/block/platform/msm_sdcc.1/by-name/mpt          /mpt            ext4    nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue wait,notrim
+/dev/block/platform/msm_sdcc.1/by-name/sns          /sns            ext4    nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue      wait,notrim
+/dev/block/platform/msm_sdcc.1/by-name/drm          /persist-lg     ext4    nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue      wait,notrim
+/dev/block/platform/msm_sdcc.1/by-name/mpt          /mpt            ext4    nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue      wait,notrim
 
-/devices/msm_sdcc.2/mmc_host*                       auto            auto    defaults voldmanaged=sdcard1:auto,encryptable=userdata 
-/devices/platform/xhci-hcd/usb*                     auto            auto    defaults voldmanaged=usb:auto
+/devices/msm_sdcc.2/mmc_host*                       auto            auto    defaults                                                            voldmanaged=sdcard1:auto,encryptable=userdata
+/devices/platform/xhci-hcd/usb*                     auto            auto    defaults                                                            voldmanaged=usb:auto
