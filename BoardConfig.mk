@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,7 +29,7 @@ BLUETOOTH_HCI_USE_MCT := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/d855/bluetooth
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_d855_defconfig
+TARGET_KERNEL_CONFIG := lineageos_d855_defconfig
 TARGET_REQUIRES_BUMP := true
 
 # Partitions
