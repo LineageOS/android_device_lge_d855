@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa3479d7_21031875",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 16086
+      },
+      "writtenOn": "2017-01-04T04:21:43Z",
+      "side": 0,
+      "message": "config file name is lineageos_d855_defconfig",
+      "revId": "70984dbd735b43fedaaa2980076916624c8888f8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
