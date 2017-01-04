@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa3479d7_cc75a333",
+        "filename": "lineage.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 3081
+      },
+      "writtenOn": "2017-01-04T08:56:45Z",
+      "side": 1,
+      "message": "We shouldn\u0027t change the product name before lineage 15 as the builds bots won\u0027t support two prefixes (cm, lineage). Just leave this file alone until lineage 15.",
+      "range": {
+        "startLine": 6,
+        "startChar": 16,
+        "endLine": 6,
+        "endChar": 28
+      },
+      "revId": "7a1e83a860c85a7423b7616c47f6cada123dc25c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa3479d7_2c878f11",
+        "filename": "recovery/recovery_updater.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 3081
+      },
+      "writtenOn": "2017-01-04T08:56:45Z",
+      "side": 1,
+      "message": "Don\u0027t add copyright headers to files we didn\u0027t touch.",
+      "range": {
+        "startLine": 3,
+        "startChar": 14,
+        "endLine": 3,
+        "endChar": 15
+      },
+      "revId": "7a1e83a860c85a7423b7616c47f6cada123dc25c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
