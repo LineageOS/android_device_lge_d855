@@ -76,6 +76,7 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # FM Radio
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
+BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # inherit from the proprietary version
