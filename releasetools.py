@@ -13,9 +13,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import hashlib
+import binascii
 import common
+import hashlib
 import re
+
+lg_magic = "41a9e467744d1d1ba429f2ecea655279"
+
+def bumped(boot_img):
+  data = binascii.hexlify(boot_img[-1024:])
+  return data.endswith(lg_magic) or data.startswith(lg_magic)
+
+def bump(boot_img):
+  magic = binascii.unhexlify(lg_magic)
+  boot_img += magic
+  return boot_img
 
 def FullOTA_Assertions(info):
   AddBasebandAssertion(info)
@@ -33,4 +45,15 @@ def AddBasebandAssertion(info):
     if len(versions) and '*' not in versions:
       cmd = 'assert(g3.verify_baseband(' + ','.join(['"%s"' % baseband for baseband in versions]) + ') == "1");'
       info.script.AppendExtra(cmd)
+  return
+
+def FullOTA_InstallEnd(info):
+  try:
+    boot_img = info.input_zip.read("IMAGES/boot.img")
+    if not bumped(boot_img):
+      common.ZipWriteStr(info.output_zip, "boot.img", bump(boot_img))
+  except KeyError:
+    print "No boot.img found in target_files"
+  else:
+    print "done"
   return
