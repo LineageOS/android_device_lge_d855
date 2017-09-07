@@ -51,6 +51,7 @@ TARGET_RECOVERY_FSTAB := device/lge/d855/rootdir/etc/fstab.g3
 
 # NFC
 BOARD_NFC_CHIPSET := pn547
+BOARD_NFC_HAL_SUFFIX := msm8974
 
 # Releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_g3
