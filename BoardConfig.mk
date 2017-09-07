@@ -50,7 +50,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_FSTAB := device/lge/d855/rootdir/etc/fstab.g3
 
 # NFC
-BOARD_NFC_CHIPSET := pn547
+NXP_CHIP_TYPE := PN547C2
 
 # Releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_g3
