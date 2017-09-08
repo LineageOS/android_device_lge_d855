@@ -24,9 +24,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-
+#include <string>
+#include <vector>
 #include "edify/expr.h"
-#include "updater/install.h"
+
 
 #define MAX(a, b) (((a) > (b)) ? (a) : (b))
 
@@ -151,37 +152,28 @@ err_ret:
 }
 
 /* verify_baseband("BASEBAND_VERSION", "BASEBAND_VERSION", ...) */
-Value * VerifyBasebandFn(const char *name, State *state, int argc, Expr *argv[]) {
+Value * VerifyBasebandFn(const char *name, State *state,
+                     const std::vector<std::unique_ptr<Expr>>& argv) {
     char current_baseband_version[BASEBAND_VER_BUF_LEN];
-    char *baseband_string;
-    char *baseband_version;
-    char *baseband_short_version;
-    int i, ret;
+    int ret;
 
     ret = get_baseband_version(current_baseband_version, BASEBAND_VER_BUF_LEN);
     if (ret) {
-        return ErrorAbort(state, "%s() failed to read current BASEBAND version: %d",
+        return ErrorAbort(state, kFreadFailure, "%s() failed to read current baseband version: %d",
                 name, ret);
     }
-
-    for (i = 0; i < argc; i++) {
-        baseband_string = Evaluate(state, argv[i]);
-        if (baseband_string < 0) {
-            return ErrorAbort(state, "%s() error parsing arguments: %d",
-                name, baseband_string);
-        }
-
-        baseband_short_version = strtok(baseband_string, ":");
-        baseband_version = strtok(NULL, ":");
-
-        uiPrintf(state, "Checking for BASEBAND version %s", baseband_short_version);
-        if (strncmp(baseband_version, current_baseband_version, strlen(baseband_version)) == 0) {
-            return StringValue(strdup("1"));
+    std::vector<std::string> args;
+    if (!ReadArgs(state, argv, &args)) {
+        return ErrorAbort(state, kArgsParsingFailure, "%s() error parsing arguments", name);
+    }
+    ret = 0;
+    for (auto& baseband_version : args) {
+        if (strncmp(baseband_version.c_str(), current_baseband_version, strlen(baseband_version.c_str())) == 0) {
+            ret = 1;
+            break;
         }
     }
-
-    uiPrintf(state, "ERROR: It appears you are running an unsupported baseband.");
-    return StringValue(strdup("0"));
+    return StringValue(strdup(ret ? "1" : "0"));
 }
 
 void Register_librecovery_updater_g3() {
