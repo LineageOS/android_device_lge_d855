@@ -27,6 +27,7 @@ TARGET_BOARD_INFO_FILE ?= device/lge/d855/board-info.txt
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/d855/bluetooth
+BOARD_CUSTOM_BT_CONFIG := device/lge/d855/bluetooth/vnd_g3.txt
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineageos_d855_defconfig
