@@ -33,18 +33,18 @@ vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
 
 # Radio
-etc/data/dsi_config.xml
-etc/data/netmgr_config.xml
-bin/netmgrd
-bin/qmuxd
-bin/rfs_access
-bin/rmt_storage
--lib/libmdmdetect.so
-lib/libuicc.so
-lib/libvss_common_idl.so
-lib/libvss_common_iface.so
-lib/libvss_nv_idl.so
-lib/libvss_nv_iface.so
+etc/data/dsi_config.xml:vendor/etc/data/dsi_config.xml
+etc/data/netmgr_config.xml:vendor/etc/data/netmgr_config.xml
+bin/netmgrd:vendor/bin/netmgrd
+bin/qmuxd:vendor/bin/qmuxd
+bin/rfs_access:vendor/bin/rfs_access
+bin/rmt_storage:vendor/bin/rmt_storage
+-vendor/lib/libmdmdetect.so
+lib/libuicc.so:vendor/lib/libuicc.so
+lib/libvss_common_idl.so:vendor/lib/libvss_common_idl.so
+lib/libvss_common_iface.so:vendor/lib/libvss_common_iface.so
+lib/libvss_nv_idl.so:vendor/lib/libvss_nv_idl.so
+lib/libvss_nv_iface.so:vendor/lib/libvss_nv_iface.so
 vendor/lib/libconfigdb.so
 vendor/lib/libcneapiclient.so
 vendor/lib/libnetmgr.so
@@ -53,13 +53,13 @@ vendor/lib/libril-qc-qmi-1.so
 vendor/lib/libril-qcril-hook-oem.so
 
 # Sensors
-etc/sensors/sensor_def_variable.conf
+etc/sensors/sensor_def_variable.conf:vendor/etc/sensors/sensor_def_variable.conf
 
 # Venus (media) firmware
-etc/firmware/venus.b00
-etc/firmware/venus.b01
-etc/firmware/venus.b02
-etc/firmware/venus.b03
-etc/firmware/venus.b04
-etc/firmware/venus.mbn
-etc/firmware/venus.mdt
+etc/firmware/venus.b00:vendor/firmware/venus.b00
+etc/firmware/venus.b01:vendor/firmware/venus.b01
+etc/firmware/venus.b02:vendor/firmware/venus.b02
+etc/firmware/venus.b03:vendor/firmware/venus.b03
+etc/firmware/venus.b04:vendor/firmware/venus.b04
+etc/firmware/venus.mbn:vendor/firmware/venus.mbn
+etc/firmware/venus.mdt:vendor/firmware/venus.mdt
