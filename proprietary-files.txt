@@ -39,7 +39,7 @@ bin/netmgrd:vendor/bin/netmgrd
 bin/qmuxd:vendor/bin/qmuxd
 bin/rfs_access:vendor/bin/rfs_access
 bin/rmt_storage:vendor/bin/rmt_storage
--vendor/lib/libmdmdetect.so
+-lib/libmdmdetect.so:vendor/lib/libmdmdetect.so
 lib/libuicc.so:vendor/lib/libuicc.so
 lib/libvss_common_idl.so:vendor/lib/libvss_common_idl.so
 lib/libvss_common_iface.so:vendor/lib/libvss_common_iface.so
