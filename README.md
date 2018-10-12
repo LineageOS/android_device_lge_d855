@@ -1,24 +1,24 @@
-Copyright 2014 - The CyanogenMod Project
+# Device Tree for LG G3 (International)
 
-Copyright 2017 - The LineageOS Project
+The international variant of LG G3 (codenamed _"d855"_) is an ex-flagship smartphone from LG.  
+It was announced in May 2014 and released in June 2014.
 
-Device configuration for LGE G3 (International)
-=====================================
+## Device specifications
+Basic                   | Spec Sheet
+-----------------------:|:-------------------------
+CPU                     | Quad-core 2.5 GHz Krait 400
+Chipset                 | Qualcomm MSM8974AC Snapdragon 801
+GPU                     | Adreno 330
+Memory                  | 2/3 GB RAM
+Shipped Android Version | Android 4.4.2, upgradable to 6.0
+Storage                 | 16/32 GB
+Battery                 | Removable Li-Ion 3000 mAh battery
+Display                 | True HD-IPS, 1440 x 2560 pixels, 16:9 ratio (~538 ppi density)
+Dimensions              | 146.3 x 74.6 x 8.9 mm
+Rear camera             | Single: 13 MP, f/2.4, 29mm, 1/3", 1.12µm, OIS, PDAF & laser AF
+Front camera            | Single: 2.1 MP, f/2.0
 
-Basic   | Spec Sheet
--------:|:-------------------------
-CPU     | Quad-core 2.5 GHz Krait 400
-CHIPSET | Qualcomm MSM8975AC Snapdragon 801
-GPU     | Adreno 330
-Memory  | 3GB RAM
-Shipped Android Version | 4.4.2
-Storage | 32GB
-MicroSD | Up to 128GB
-Battery | 3000 mAh
-Dimensions | 146.3 x 74.7 x 8.9 mm
-Display | 1440 x 2560 pixels True HD-IPS
-Camera  | 13 MP, 4160 x 3120 pixels
-Release Date | July 2014
+Copyright 2014 - The CyanogenMod Project  
+Copyright 2018 - The LineageOS Project
 
-
-![LG G3 D855](http://i.imgur.com/sYNKEHq.jpg "LG G3 D855")
+![LG G3](https://i.imgur.com/TIVXyJ9.jpg "LG G3")
