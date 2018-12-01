@@ -38,10 +38,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
 
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_g3
-
 # RIL
 PRODUCT_PACKAGES += \
     librmnetctl
