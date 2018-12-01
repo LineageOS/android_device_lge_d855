@@ -20,9 +20,6 @@
 
 TARGET_OTA_ASSERT_DEVICE := g3,d855
 
-# Assertions
-TARGET_BOARD_INFO_FILE ?= device/lge/d855/board-info.txt
-
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
@@ -52,10 +49,6 @@ TARGET_RECOVERY_FSTAB := device/lge/d855/rootdir/etc/fstab.g3
 # NFC
 BOARD_NFC_CHIPSET := pn547
 BOARD_NFC_HAL_SUFFIX := msm8974
-
-# Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_g3
-TARGET_RELEASETOOLS_EXTENSIONS := device/lge/d855
 
 # RIL
 BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_10
