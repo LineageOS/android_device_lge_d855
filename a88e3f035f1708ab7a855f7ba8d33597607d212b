@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3cc1bf51_bb0fe7da",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 15173
+      },
+      "writtenOn": "2018-12-09T17:39:41Z",
+      "side": 1,
+      "message": "While you are here, why does this need to be a build target (\u0027-\u0027 at the start of the line)? My experience is that the only things relying on this are other blobs -- is there some uniqueness in g3 land?",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 47
+      },
+      "revId": "a88e3f035f1708ab7a855f7ba8d33597607d212b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
