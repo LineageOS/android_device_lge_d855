@@ -45,8 +45,10 @@ PRODUCT_PACKAGES += \
 
 # NFC packages
 PRODUCT_PACKAGES += \
-    NfcNci \
-    nfc_nci.msm8974
+    NfcNci
+
+PRODUCT_COPY_FILES += \
+    vendor/lge/g3-common/proprietary/vendor/lib/hw/nfc_nci.msm8974.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/nfc_nci.msm8974.so
 
 # FM Radio
 PRODUCT_PACKAGES += \
