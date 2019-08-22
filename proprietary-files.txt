@@ -63,3 +63,6 @@ etc/firmware/venus.b03:vendor/firmware/venus.b03
 etc/firmware/venus.b04:vendor/firmware/venus.b04
 etc/firmware/venus.mbn:vendor/firmware/venus.mbn
 etc/firmware/venus.mdt:vendor/firmware/venus.mdt
+
+# NFC
+vendor/lib/hw/nfc_nci.msm8974.so|7dcb79a385dd1155cb9b6310a3e7b85b7dc8db13
