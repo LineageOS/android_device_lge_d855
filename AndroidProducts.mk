@@ -15,3 +15,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_d855.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_d855-userdebug \
+    lineage_d855-eng \
+    lineage_d855-user
