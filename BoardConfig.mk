@@ -50,9 +50,6 @@ TARGET_RECOVERY_FSTAB := device/lge/d855/rootdir/etc/fstab.g3
 BOARD_NFC_CHIPSET := pn547
 BOARD_NFC_HAL_SUFFIX := msm8974
 
-# RIL
-TARGET_RIL_VARIANT := caf
-
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
