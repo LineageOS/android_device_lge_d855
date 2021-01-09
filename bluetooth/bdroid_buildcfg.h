@@ -20,6 +20,5 @@
 #define BTM_DEF_LOCAL_NAME "LG G3 (D855)"
 
 #define BLE_VND_INCLUDED          TRUE
-#define BLUETOOTH_QTI_SW          TRUE
 
 #endif
